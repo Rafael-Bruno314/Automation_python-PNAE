@@ -1,0 +1,477 @@
+{
+  "id": "2664e663-d45b-4eae-b0a4-97b9c34f28dd",
+  "version": "2.0",
+  "name": "Automatizando a busca Emater",
+  "url": "https://www.fnde.gov.br/sigpcadm/sistema.pu?operation=localizar",
+  "tests": [{
+    "id": "9d1cedbd-fe43-452e-b372-6fbd464e3e36",
+    "name": "Pesquisando e passando pela tela de verificação",
+    "commands": [{
+      "id": "2bb1872a-d0ea-4901-b2a6-98c103f2a237",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.fnde.gov.br/sigpcadm/sistema.pu?operation=localizar",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f0b19389-2b89-4216-b5f4-2ccd7c5cb58f",
+      "comment": "",
+      "command": "click",
+      "target": "id=ext-gen108",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e79e05b7-99eb-4cbd-bf6a-5d9fafc516cf",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//*[@id=\"ext-gen277\"]/div[2]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "12ab0ca8-734c-4c10-b52e-dc720a0bb781",
+      "comment": "",
+      "command": "click",
+      "target": "id=ext-gen152",
+      "targets": [
+        ["id=ext-gen152", "id"],
+        ["css=#ext-gen152", "css:finder"],
+        ["xpath=(//img[contains(@src,'data:image/gif;base64,R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==')])[7]", "xpath:img"],
+        ["xpath=//img[@id='ext-gen152']", "xpath:attributes"],
+        ["xpath=//div[@id='ext-gen151']/img", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cfd0bc0a-17ea-4f78-9520-a189706a3117",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//*[@id=\"ext-gen154\"]/div[4]/div",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "75305b79-a5e2-4e33-bd80-dabeda86e85c",
+      "comment": "",
+      "command": "click",
+      "target": "id=ext-gen146",
+      "targets": [
+        ["id=ext-gen146", "id"],
+        ["css=#ext-gen146", "css:finder"],
+        ["xpath=(//img[contains(@src,'data:image/gif;base64,R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==')])[6]", "xpath:img"],
+        ["xpath=//img[@id='ext-gen146']", "xpath:attributes"],
+        ["xpath=//div[@id='ext-gen145']/img", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div/div/div/div/div/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "372bc533-5fe0-437a-9b67-58eeadab12e2",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//*[@id=\"ext-gen148\"]/div[2]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "005b1142-0601-466f-a975-6e37cf952558",
+      "comment": "",
+      "command": "click",
+      "target": "id=ext-gen164",
+      "targets": [
+        ["id=ext-gen164", "id"],
+        ["css=#ext-gen164", "css:finder"],
+        ["xpath=(//img[contains(@src,'data:image/gif;base64,R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==')])[9]", "xpath:img"],
+        ["xpath=//img[@id='ext-gen164']", "xpath:attributes"],
+        ["xpath=//div[@id='ext-gen163']/img", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div[5]/div/div/div/div/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "99f57e7a-915e-45d4-92e3-e49dcd1331fc",
+      "comment": "Escolhendo Minas Gerais",
+      "command": "click",
+      "target": "xpath=//*[@id=\"ext-gen166\"]/div[11]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "19957bfd-d2b9-4ffd-a92a-a519be4acad5",
+      "comment": "",
+      "command": "echo",
+      "target": "Começando loop",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "125037ff-b515-4199-93dd-412f40c2d225",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "counter"
+    }, {
+      "id": "8ac6f213-4913-4b85-8a9a-ac78d675631a",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var cidades = []; return cidades",
+      "targets": [],
+      "value": "cidades"
+    }, {
+      "id": "52ab4360-bcc5-445e-ad70-31b36a7ba3cd",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var cidades_sem_info = []; return cidades_sem_info",
+      "targets": [],
+      "value": "cidades_sem_info"
+    }, {
+      "id": "866e4dd7-88ba-4774-89e1-85386f0d70c3",
+      "comment": "Abrindo cidade",
+      "command": "click",
+      "target": "id=ext-gen170",
+      "targets": [
+        ["id=ext-gen170", "id"],
+        ["css=#ext-gen170", "css:finder"],
+        ["xpath=(//img[contains(@src,'data:image/gif;base64,R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==')])[10]", "xpath:img"],
+        ["xpath=//img[@id='ext-gen170']", "xpath:attributes"],
+        ["xpath=//div[@id='ext-gen169']/img", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div[6]/div/div/div/div/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6162182b-8c3d-43d4-a118-d22a93721999",
+      "comment": "",
+      "command": "while",
+      "target": "${counter} <= 853",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e935bf2a-0786-407b-9c1e-e04e214c5517",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//*[@id=\"ext-gen172\"]/div[${counter}]",
+      "targets": [
+        ["css=.x-combo-selected:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='ext-gen172']/div[3]", "xpath:idRelative"],
+        ["xpath=//div[24]/div/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "14f3870a-dde2-4c71-863f-39e79e346510",
+      "comment": "",
+      "command": "click",
+      "target": "id=ext-gen219",
+      "targets": [
+        ["id=ext-gen219", "id"],
+        ["css=#ext-gen219", "css:finder"],
+        ["xpath=//button[@id='ext-gen219']", "xpath:attributes"],
+        ["xpath=//table[@id='ext-comp-1043']/tbody/tr[2]/td[2]/em/button", "xpath:idRelative"],
+        ["xpath=//div/div/div/table/tbody/tr/td/table/tbody/tr/td/table/tbody/tr[2]/td[2]/em/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Pesquisar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "325c2a61-ade1-40e4-aa45-3117d017f281",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.x-grid3-row:nth-child(1) .x-grid3-col:nth-child(5) > .x-grid3-cell-inner",
+      "targets": [
+        ["css=.x-grid3-row:nth-child(11) .x-grid3-col:nth-child(5) > .x-grid3-cell-inner", "css:finder"],
+        ["xpath=//div[@id='ext-gen241']/div[11]/table/tbody/tr/td[5]/div", "xpath:idRelative"],
+        ["xpath=//div[11]/table/tbody/tr/td[5]/div", "xpath:position"]
+      ],
+      "value": "ano em questao"
+    }, {
+      "id": "c744e65f-7de9-4239-b9e4-fd52b80779aa",
+      "comment": "",
+      "command": "//click",
+      "target": "css=.x-grid3-row:nth-child(1) .x-grid3-col:nth-child(5) > .x-grid3-cell-inner",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a76bd1f0-529c-47cb-a68f-fcaccdc6eefe",
+      "comment": "",
+      "command": "mouseDownAt",
+      "target": "id=ext-gen240",
+      "targets": [
+        ["id=ext-gen240", "id"],
+        ["css=#ext-gen240", "css:finder"],
+        ["xpath=//div[@id='ext-gen240']", "xpath:attributes"],
+        ["xpath=//div[@id='ext-gen238']/div[2]", "xpath:idRelative"],
+        ["xpath=//div[6]/div/div[2]/div/div/div/div[2]", "xpath:position"]
+      ],
+      "value": "440,216"
+    }, {
+      "id": "9497b5e7-ce82-421a-a5a3-346d7ee4aeb3",
+      "comment": "",
+      "command": "mouseMoveAt",
+      "target": "id=ext-gen240",
+      "targets": [
+        ["id=ext-gen240", "id"],
+        ["css=#ext-gen240", "css:finder"],
+        ["xpath=//div[@id='ext-gen240']", "xpath:attributes"],
+        ["xpath=//div[@id='ext-gen238']/div[2]", "xpath:idRelative"],
+        ["xpath=//div[6]/div/div[2]/div/div/div/div[2]", "xpath:position"]
+      ],
+      "value": "440,216"
+    }, {
+      "id": "f0b8bfc2-8637-4056-95b9-afd77a272154",
+      "comment": "",
+      "command": "mouseUpAt",
+      "target": "id=ext-gen240",
+      "targets": [
+        ["id=ext-gen240", "id"],
+        ["css=#ext-gen240", "css:finder"],
+        ["xpath=//div[@id='ext-gen240']", "xpath:attributes"],
+        ["xpath=//div[@id='ext-gen238']/div[2]", "xpath:idRelative"],
+        ["xpath=//div[6]/div/div[2]/div/div/div/div[2]", "xpath:position"]
+      ],
+      "value": "440,216"
+    }, {
+      "id": "2b6a82bd-d1a2-4f96-84c1-1fcdedec3dff",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//*[@id=\"ext-gen241\"]/div[1]/table/tbody/tr/td[15]/div/a[3]/img",
+      "targets": [],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win3984",
+      "windowTimeout": 2000
+    }, {
+      "id": "657442c6-b277-468a-9641-4184c95cc104",
+      "comment": "",
+      "command": "storeWindowHandle",
+      "target": "root",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6fb1f2d4-14ca-4bb1-aedc-09cc3c729b4a",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win3984}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "90fc23df-f192-479b-8eef-adf1f56c2c8d",
+      "comment": "",
+      "command": "store",
+      "target": "http://www.fnde.gov.br/sigpc/consultarConcessao.seam",
+      "targets": [],
+      "value": "endereco"
+    }, {
+      "id": "22e2eb45-88e3-4520-a72d-42bb29008bdc",
+      "comment": "",
+      "command": "echo",
+      "target": "${endereco}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "86df4aa9-acaf-493f-a387-79bfbf481bc9",
+      "comment": "",
+      "command": "open",
+      "target": "${endereco}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1f8cbb89-2cee-4ba9-aaa7-406316258132",
+      "comment": "",
+      "command": "click",
+      "target": "id=j_id63:SQuestionario",
+      "targets": [
+        ["id=j_id63:SQuestionario", "id"],
+        ["linkText=Informações da Execução Física", "linkText"],
+        ["css=#j_id63\\3ASQuestionario", "css:finder"],
+        ["xpath=//a[contains(text(),'Informações da Execução Física')]", "xpath:link"],
+        ["xpath=//a[@id='j_id63:SQuestionario']", "xpath:attributes"],
+        ["xpath=//td[@id='iconj_id63:j_id103']/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/sigpc/pages/Questionario/Questionario.seam?actionMethod=pages%2Fhome%2FhomeMenuVertical.xhtml%3AmanterQuestionarioController.iniciaQuestionario')]", "xpath:href"],
+        ["xpath=//div[7]/div/table/tbody/tr/td[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Informações da Execução Física')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f5db37a2-ca58-44ad-ac35-a9b114199bbf",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=tr:nth-child(3) > td:nth-child(6)",
+      "targets": [],
+      "value": "municipio"
+    }, {
+      "id": "01b5c1b6-415d-4091-a7d4-dc15c52c72da",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=strong > div:nth-child(2)",
+      "targets": [
+        ["css=strong > div:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='formQuestionario:j_id202:0:j_id204:12:Quest_01']/strong/div", "xpath:idRelative"],
+        ["xpath=//strong/div", "xpath:position"]
+      ],
+      "value": "informe"
+    }, {
+      "id": "fce39363-af6d-42d5-936d-f19a45f9e10b",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=strong > div:nth-child(3)",
+      "targets": [
+        ["css=strong > div:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='formQuestionario:j_id202:0:j_id204:12:Quest_01']/strong/div[2]", "xpath:idRelative"],
+        ["xpath=//strong/div[2]", "xpath:position"]
+      ],
+      "value": "informep"
+    }, {
+      "id": "b7be1432-201b-4a35-bba9-13643973e032",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=h3",
+      "targets": [
+        ["css=h3", "css:finder"],
+        ["xpath=//h3[@name='topopagina']", "xpath:attributes"],
+        ["xpath=//div[@id='formQuestionario:painelAccordion']/div/div/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Questionário do PNAE 2019')]", "xpath:innerText"]
+      ],
+      "value": "ano_vigente"
+    }, {
+      "id": "f8abbc57-5ae2-4219-9278-7722ab7f3e84",
+      "comment": "",
+      "command": "executeScript",
+      "target": "${cidades}.push(${municipio}); return ${cidades}",
+      "targets": [],
+      "value": "cidades"
+    }, {
+      "id": "65d139f7-f1bd-460f-9b27-02c1eeb4941e",
+      "comment": "",
+      "command": "executeScript",
+      "target": "${cidades}.push(${informe}); return ${cidades}",
+      "targets": [],
+      "value": "cidades"
+    }, {
+      "id": "768fe754-5327-4357-a223-bdefb7f4fa7e",
+      "comment": "",
+      "command": "executeScript",
+      "target": "${cidades}.push(${informep}); return ${cidades}",
+      "targets": [],
+      "value": "cidades"
+    }, {
+      "id": "7c700ffc-16c5-4857-8b9f-3d605c07d4eb",
+      "comment": "",
+      "command": "executeScript",
+      "target": "${cidades}.push(${ano_vigente}); return ${cidades}",
+      "targets": [],
+      "value": "cidades"
+    }, {
+      "id": "42570549-f0d8-4cdc-a026-afbf898d27ff",
+      "comment": "",
+      "command": "echo",
+      "target": "${cidades}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "151bd4a7-dc18-4c35-b288-163f59841f81",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${counter} + 1",
+      "targets": [],
+      "value": "counter"
+    }, {
+      "id": "0e15b575-3a99-43b2-94f3-9fe466c4b0af",
+      "comment": "",
+      "command": "echo",
+      "target": "Contador está indo para ${counter}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b3961d73-35ce-476d-bcb2-810dcc0d1568",
+      "comment": "",
+      "command": "executeScript",
+      "target": "window.close();",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7730ae02-2209-49a2-a3ff-d7344f8791a8",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5bc5159f-7620-4e8d-8ccd-46d780445ea7",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//*[@id=\"ext-gen170\"]",
+      "targets": [
+        ["id=ext-gen170", "id"],
+        ["css=#ext-gen170", "css:finder"],
+        ["xpath=(//img[contains(@src,'data:image/gif;base64,R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==')])[10]", "xpath:img"],
+        ["xpath=//img[@id='ext-gen170']", "xpath:attributes"],
+        ["xpath=//div[@id='ext-gen169']/img", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div[6]/div/div/div/div/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3cfce297-82c4-4ffa-85a9-918fc25cd92b",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "99313e39-56b5-4ebc-ab2b-333dcb06837e",
+    "name": "Testando a concatenação",
+    "commands": [{
+      "id": "bdf50c8e-894b-43c6-b7d2-05fa1d350216",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "cont"
+    }, {
+      "id": "1df45139-242d-413e-9193-336f5daefe0a",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var points = []; return points",
+      "targets": [],
+      "value": "points"
+    }, {
+      "id": "560aa9af-c674-492b-a63b-c6f4cf3c313b",
+      "comment": "",
+      "command": "while",
+      "target": "${cont} < 3",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6c76d19d-9666-4d8c-8fc8-255c8c1151f3",
+      "comment": "",
+      "command": "executeScript",
+      "target": "${points}.push(${cont}); return ${points}",
+      "targets": [],
+      "value": "points"
+    }, {
+      "id": "5821d227-3762-4136-9960-4b35cd3cbb08",
+      "comment": "",
+      "command": "echo",
+      "target": "${points}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "22d137a6-5d35-4a05-a4b3-e737401d6ea6",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${cont} + 1",
+      "targets": [],
+      "value": "cont"
+    }, {
+      "id": "e78d26d6-9987-4b38-a964-fd8d36c5642a",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "174f3bc6-746d-4a87-9712-502e77c46a2f",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["9d1cedbd-fe43-452e-b372-6fbd464e3e36"]
+  }],
+  "urls": ["https://www.fnde.gov.br/sigpcadm/sistema.pu?operation=localizar"],
+  "plugins": []
+}
